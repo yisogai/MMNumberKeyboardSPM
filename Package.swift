@@ -15,7 +15,9 @@ let package = Package(
     targets: [
         .target(
             name: "MMNumberKeyboard",
-            path: "Classes",
+            resources: [
+                .process("Media.xcassets")
+            ],
             publicHeadersPath: "."),
     ]
 )
