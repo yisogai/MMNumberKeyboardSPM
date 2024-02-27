@@ -99,7 +99,7 @@ static const CGFloat MMNumberKeyboardPadSpacing = 8.0f;
     self.separatorViews = [NSMutableArray array];
     
     // Add default action.
-    UIImage *dismissImage = [UIImage imageNamed:@"MMNumberKeyboardDismissKey" inBundle:SWIFTPM_MODULE_BUNDLE withConfiguration: NULL];
+    UIImage *dismissImage = [UIImage imageNamed:@"MMNumberKeyboardDismissKey" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection: nil];
     
     [self configureSpecialKeyWithImage:dismissImage target:self action:@selector(_dismissKeyboard:)];
     
@@ -151,7 +151,7 @@ static const CGFloat MMNumberKeyboardPadSpacing = 8.0f;
         [buttonDictionary setObject:button forKey:@(key)];
     }
     
-    UIImage *backspaceImage = [UIImage imageNamed:@"MMNumberKeyboardDeleteKey" inBundle:SWIFTPM_MODULE_BUNDLE withConfiguration: NULL];
+    UIImage *backspaceImage = [UIImage imageNamed:@"MMNumberKeyboardDeleteKey" inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection: nil];
     
     UIButton *backspaceButton = [MMKeyboardButton keyboardButtonWithStyle:MMNumberKeyboardButtonStyleSecondary];
     [backspaceButton setImage:[backspaceImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
